@@ -50,12 +50,12 @@
                         <div class="card-body text-center">
                             <!-- Profile picture image-->
                             @if ($user->profile != NULL)
-                                <img class="img-account-profile rounded-circle mb-2" src="{{ Storage::url($user->profile) }}" alt="" />
+                            <img class="img-account-profile rounded-circle mb-2" src="{{ url('assets/profile-images/' . basename($user->profile)) }}" alt="" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 2px solid #0000 ; padding: 2px;" />
                             @else
-                                <img class="img-account-profile rounded-circle mb-2" src="https://ui-avatars.com/api/?name={{ $user->name }}" alt="" />
+                                <img class="img-account-profile rounded-circle mb-2" src="https://ui-avatars.com/api/?name={{ $user->name }}" alt="" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 2px solid #0000 ; padding: 2px;" />
                             @endif
                             <!-- Profile picture help block-->
-                            <div class="small font-italic text-muted mb-4">JPG atau PNG tidak lebih besar dari 1 MB</div>
+                            <div class="small font-italic text-muted mb-4">JPG atau PNG tidak lebih besar dari 2 MB</div>
                             <!-- Profile picture upload button-->
                             <form action="{{ route('profile-upload') }}" method="post" enctype="multipart/form-data">
                             @csrf

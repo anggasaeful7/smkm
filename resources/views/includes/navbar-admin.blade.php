@@ -29,20 +29,20 @@
             <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage"
                 href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
-                @if (Auth::user()->profile != null)
-                    <img class="img-fluid" src="{{ Storage::url(Auth::user()->profile) }}" />
-                @else
-                    <img class="img-fluid" src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}" />
-                @endif
+                @if(Auth::check() && Auth::user()->profile)
+                <img class="img-fluid" src="{{ url('assets/profile-images/' . basename(Auth::user()->profile)) }}" alt="" ;/>
+            @else
+                <img class="img-fluid" src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}" alt="" />
+            @endif
             </a>
             <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up"
                 aria-labelledby="navbarDropdownUserImage">
                 <h6 class="dropdown-header d-flex align-items-center">
                     @if (Auth::user()->profile != null)
-                        <img class="dropdown-user-img" src="{{ Storage::url(Auth::user()->profile) }}" />
+                    <img class="img-fluid" src="{{ url('assets/profile-images/' . basename(Auth::user()->profile)) }}" alt="" style="width: 40px; height: 40px; object-fit: cover; border-radius: 50%; border: 2px solid green ; margin-right: 10px;"/>
                     @else
                         <img class="dropdown-user-img"
-                            src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}" />
+                            src="https://ui-avatars.com/api/?name={{ Auth::user()->name }} " style="width: 40px; height: 40px; object-fit: cover; border-radius: 50%; border: 2px solid green ;  margin-right: 10px;"/>
                     @endif
 
                     <div class="dropdown-user-details">

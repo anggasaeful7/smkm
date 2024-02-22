@@ -42,6 +42,14 @@ return [
             'visibility' => 'public',
         ],
 
+        'assets' => [
+            'driver' => 'local',
+            'root' => storage_path('app/assets'),
+            'url' => env('APP_URL').'/assets',
+            'visibility' => 'assets',
+        ],
+
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
@@ -68,6 +76,8 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        public_path('assets') => storage_path('app/assets'),
+
     ],
 
 ];
