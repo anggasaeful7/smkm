@@ -106,8 +106,8 @@ $name = $item->name;
 <div class="modal fade" id="updateModal{{ $id }}" role="dialog" aria-labelledby="createModal" aria-hidden="true" style="overflow:hidden;">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="updateModal{{ $id }}">Ubah Data</h5>
+            <div class="modal-header bg-green">
+                <h5 class="modal-title text-white" id="updateModal{{ $id }}">Ubah Data</h5>
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('department.update', $item->id) }}" method="post">
