@@ -69,7 +69,7 @@
                         </a>
                         <a class="nav-link {{ request()->is('admin/sender*') ? 'active' : '' }}"
                             href="{{ route('sender.index') }}">
-                            <div class="nav-link-icon"><i class="fas fa-address-card"></i></div> Pengaju Proposal
+                            <div class="nav-link-icon"><i class="fas fa-address-card"></i></div> Penanggung Jawab Proposal
                         </a>
                         <a class="nav-link {{ request()->is('admin/prodi*') ? 'active' : '' }}"
                             href="{{ route('prodi.index') }}">

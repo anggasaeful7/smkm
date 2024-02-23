@@ -13,7 +13,7 @@
                         <div class="col-auto mb-3">
                             <h1 class="page-header-title text-white">
                                 <div class="page-header-icon text-white"><i data-feather="mail"></i></div>
-                                Data Surat Disposisi
+                                Halaman Satus Pengajuan Proposal
                             </h1>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                 <div class="col-lg-12">
                     <div class="card card-header-actions mb-4">
                         <div class="card-header bg-green text-white">
-                            Data :
+                            Data Status Pengajuan:
                             <div>
                                 <a class="btn btn-sm btn-white" href="{{ route('print-surat-disposisi') }}" target="_blank">
                                     <i data-feather="printer"></i> &nbsp;
@@ -61,10 +61,10 @@
                                     <thead>
                                         <tr>
                                             <th width="10">No.</th>
-                                            <th>No.Surat</th>
-                                            <th>Status</th>
+                                            <th>Nama Proposal</th>
+                                            <th>Status Pengajuan</th>
                                             <th>Tanggal Selesai</th>
-                                            <th>Nominal</th>
+                                            <th>Nominal Disetujui</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>

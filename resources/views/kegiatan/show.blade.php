@@ -19,7 +19,7 @@
                         <div class="col-12 col-xl-auto mb-3">
                             <button class="btn btn-sm btn-light text-primary" onclick="javascript:window.history.back();">
                                 <i class="me-1" data-feather="arrow-left"></i>
-                                Kembali Ke Semua Kegiatan
+                                Kembali
                             </button>
                         </div>
                     </div>

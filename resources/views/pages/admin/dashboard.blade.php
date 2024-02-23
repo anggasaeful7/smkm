@@ -11,11 +11,11 @@
                 <div class="page-header-content pt-4">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto mt-4">
-                            <h1 class="page-header-title" style="color: black;">
-                                <div class="page-header-icon" style="color: black;"><i data-feather="activity"></i></div>
+                            <h1 class="page-header-title" style="color: white;">
+                                <div class="page-header-icon" style="color: white;"><i data-feather="activity"></i></div>
                                 Dashboard
                             </h1>
-                            <div class="page-header-subtitle" style="color: black;">Administrator Panel</div>
+                            <div class="page-header-subtitle" style="color: white;">Administrator Panel</div>
                         </div>
                         <div class="col-12 col-xl-auto mt-4">
                             <div class="input-group input-group-joined border-0" style="width: 16.5rem">

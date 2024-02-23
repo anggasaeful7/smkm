@@ -19,7 +19,7 @@
                         <div class="col-12 col-xl-auto mb-3">
                             <a class="btn btn-sm btn-light text-primary" href="{{ route('daftar-kegiatan') }}">
                                 <i class="me-1" data-feather="arrow-left"></i>
-                                Kembali ke Semua Kegiatan
+                                Kembali
                             </a>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                                     <label for="department_id" class="col-sm-3 col-form-label">Nama Organisasi</label>
                                     <div class="col-sm-9">
                                         <select name="department_id" class="form-control" required>
-                                            <option value="">Pilih Departemen...</option>
+                                            <option value="">Pilih Organisasi...</option>
                                             @foreach ($departments as $department)
                                                 <option value="{{ $department->id }}"
                                                     {{ old('department_id') == $department->id ? 'selected' : '' }}>
@@ -97,7 +97,7 @@
                                     <div class="col-sm-9">
                                         <input type="text"
                                             class="form-control @error('nama_kegiatan') is-invalid @enderror"
-                                            value="{{ old('nama_kegiatan') }}" name="nama_kegiatan" placeholder="Perihal.."
+                                            value="{{ old('nama_kegiatan') }}" name="nama_kegiatan" placeholder="Masukan Nama Kegiatan.."
                                             required>
                                     </div>
                                     @error('nama_kegiatan')
@@ -127,21 +127,20 @@
                                 <div class="mb-3 row">
                                     <label for="deskripsi" class="col-sm-3 col-form-label">Deksripsi Kegiatan</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control @error('deskripsi') is-invalid @enderror"
-                                            value="{{ old('deskripsi') }}" name="deskripsi" placeholder="Perihal.."
-                                            required>
+                                        <textarea class="form-control @error('deskripsi') is-invalid @enderror"
+                                                name="deskripsi" placeholder="Masukan Deskripsi dan Informasi Penting (Termasuk SKKM).." required>{{ old('deskripsi') }}</textarea>
                                     </div>
                                     @error('deskripsi')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
                                     @enderror
-                                </div>
+                                  </div>
                                 <div class="mb-3 row">
                                     <label for="ruangan" class="col-sm-3 col-form-label">Ruangan Kegiatan</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control @error('ruangan') is-invalid @enderror"
-                                            value="{{ old('ruangan') }}" name="ruangan" placeholder="Perihal.." required>
+                                            value="{{ old('ruangan') }}" name="ruangan" placeholder="Masukan Data Ruangan ( Masukan [-] jika belum ada.." required>
                                     </div>
                                     @error('ruangan')
                                         <div class="invalid-feedback">
@@ -153,7 +152,7 @@
                                     <label for="batas" class="col-sm-3 col-form-label">Batas Pendaftar</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control @error('batas') is-invalid @enderror"
-                                            value="{{ old('batas') }}" name="batas" placeholder="batas pendaftaran"
+                                            value="{{ old('batas') }}" name="batas" placeholder="Masukan Jumlah Pendaftar.."
                                             required>
                                     </div>
                                     @error('batas')
@@ -163,12 +162,12 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="letter_file" class="col-sm-3 col-form-label">File</label>
+                                    <label for="letter_file" class="col-sm-3 col-form-label">Flayer Kegiatan</label>
                                     <div class="col-sm-9">
                                         <input type="file"
                                             class="form-control @error('letter_file') is-invalid @enderror"
                                             value="{{ old('letter_file') }}" name="letter_file" required>
-                                        <div id="letter_file" class="form-text">Ekstensi .JPG,PNG,JPEG | <span
+                                        <div id="letter_file" class="form-text">Ekstensi .JPG,PNG,JPEG | Size 1080x1080px <span
                                                 style="color: blue;"> * Harus diisi</span></div>
                                     </div>
                                     @error('letter_file')

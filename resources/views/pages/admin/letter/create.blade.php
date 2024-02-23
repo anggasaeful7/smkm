@@ -13,14 +13,8 @@
                         <div class="col-auto mb-3">
                             <h1 class="page-header-title text-white">
                                 <div class="page-header-icon text-white"><i class="fas fa-book"></i></div>
-                                Tambah Surat Masuk
+                                Pengajuan Proposal
                             </h1>
-                        </div>
-                        <div class="col-12 col-xl-auto mb-3">
-                            <a class="btn btn-sm btn-light text-primary" href="{{ route('surat-masuk') }}">
-                                <i class="me-1" data-feather="arrow-left"></i>
-                                Kembali ke Semua Disposisi
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -43,14 +37,14 @@
                 <div class="row gx-4">
                     <div class="col-lg-9">
                         <div class="card mb-4">
-                            <div class="card-header text-white bg-green">Form Surat</div>
+                            <div class="card-header text-white bg-green">Form Pengajuan Proposal</div>
                             <div class="card-body">
                                 <div class="mb-3 row">
-                                    <label for="letter_type" class="col-sm-3 col-form-label">Jenis Surat</label>
+                                    <label for="letter_type" class="col-sm-3 col-form-label">Jenis Proposal</label>
                                     <div class="col-sm-9">
                                         <select name="letter_type" class="form-control" required>
                                             <option value="Surat Masuk"
-                                                {{ old('letter_type') == 'Surat Masuk' ? 'selected' : '' }}>Surat Masuk
+                                                {{ old('letter_type') == 'Surat Masuk' ? 'selected' : '' }}>Proosal Masuk
                                             </option>
                                         </select>
                                     </div>
@@ -61,10 +55,10 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="letter_no" class="col-sm-3 col-form-label">No. Surat</label>
+                                    <label for="letter_no" class="col-sm-3 col-form-label">Nama Proposal</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control @error('letter_no') is-invalid @enderror"
-                                            value="{{ old('letter_no') }}" name="letter_no" placeholder="Nomor Surat.."
+                                            value="{{ old('letter_no') }}" name="letter_no" placeholder="Masukan Nama Proposal (HURUF KAPITAL).."
                                             required>
                                     </div>
                                     @error('letter_no')
@@ -74,7 +68,7 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="letter_date" class="col-sm-3 col-form-label">Tanggal Surat</label>
+                                    <label for="letter_date" class="col-sm-3 col-form-label">Tanggal Pengajuan</label>
                                     <div class="col-sm-9">
                                         <input type="date"
                                             class="form-control @error('letter_date') is-invalid @enderror"
@@ -87,10 +81,10 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="agenda_no" class="col-sm-3 col-form-label">No.Agenda</label>
+                                    <label for="agenda_no" class="col-sm-3 col-form-label">Ajukan SKKM</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control @error('agenda_no') is-invalid @enderror"
-                                            value="{{ old('agenda_no') }}" name="agenda_no" placeholder="No.Agenda.."
+                                        <input type="number" class="form-control @error('agenda_no') is-invalid @enderror"
+                                            value="{{ old('agenda_no') }}" name="agenda_no" placeholder="Isi [ 0 ] jika tidak ada | Max 03 (Skala Acara Besar) .."
                                             required>
                                     </div>
                                     @error('agenda_no')
@@ -100,10 +94,10 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="regarding" class="col-sm-3 col-form-label">Perihal</label>
+                                    <label for="regarding" class="col-sm-3 col-form-label">Target Pendaftar</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control @error('regarding') is-invalid @enderror"
-                                            value="{{ old('regarding') }}" name="regarding" placeholder="Perihal.."
+                                        <input type="number" class="form-control @error('regarding') is-invalid @enderror"
+                                            value="{{ old('regarding') }}" name="regarding" placeholder="Masukan Jumlah Target Pendaftar.."
                                             required>
                                     </div>
                                     @error('regarding')
@@ -114,10 +108,10 @@
                                 </div>
 
                                 <div class="mb-3 row">
-                                    <label for="department_id" class="col-sm-3 col-form-label">Departemen</label>
+                                    <label for="department_id" class="col-sm-3 col-form-label">Nama Organisasi</label>
                                     <div class="col-sm-9">
                                         <select name="department_id" class="form-control" required>
-                                            <option value="">Pilih Departemen...</option>
+                                            <option value="">Pilih Organisasi...</option>
                                             @foreach ($departments as $department)
                                                 <option value="{{ $department->id }}"
                                                     {{ old('department_id') == $department->id ? 'selected' : '' }}>
@@ -132,10 +126,10 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="sender_id" class="col-sm-3 col-form-label">Pengirim</label>
+                                    <label for="sender_id" class="col-sm-3 col-form-label">Penanggung Jawab</label>
                                     <div class="col-sm-9">
                                         <select name="sender_id" class="form-control" required>
-                                            <option value="">Pilih Pengirim..</option>
+                                            <option value="">Pilih Penanggung Jawab..</option>
                                             @foreach ($senders as $sender)
                                                 <option value="{{ $sender->id }}"
                                                     {{ old('sender_id') == $sender->id ? 'selected' : '' }}>
@@ -150,10 +144,10 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="nominal" class="col-sm-3 col-form-label">Nominal</label>
+                                    <label for="nominal" class="col-sm-3 col-form-label">Nominal Pengajuan</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control @error('nominal') is-invalid @enderror"
-                                            value="{{ old('nominal') }}" name="nominal" placeholder="Nominal.." required>
+                                            value="{{ old('nominal') }}" name="nominal" placeholder="Masukan Nominal Pengajuan (Contoh:1.000.00)" required>
                                     </div>
                                     @error('nominal')
                                         <div class="invalid-feedback">
@@ -162,7 +156,7 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="letter_file" class="col-sm-3 col-form-label">File</label>
+                                    <label for="letter_file" class="col-sm-3 col-form-label">Lampirkan Proposal</label>
                                     <div class="col-sm-9">
                                         <input type="file"
                                             class="form-control @error('letter_file') is-invalid @enderror"

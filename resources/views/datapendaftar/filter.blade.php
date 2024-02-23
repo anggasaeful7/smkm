@@ -23,7 +23,7 @@
         </header>
         <div class="container-fluid px-4">
             <div class="card mb-4">
-                <div class="card-header bg-green text-white">Data Pendaftar</div>
+                <div class="card-header bg-green text-white">Filter Data Pendaftar</div>
                 <div class="card-body">
                     @if ($errors->any())
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -44,7 +44,7 @@
                                     <label for="department_id" class="col-sm-3 col-form-label">Nama Organisasi</label>
                                     <div class="col-sm-9">
                                         <select name="department_id" class="form-control" required>
-                                            <option value="">Pilih Departemen...</option>
+                                            <option value="">Pilih Organisasi...</option>
                                             @foreach ($departments as $department)
                                                 <option value="{{ $department->id }}"
                                                     {{ old('department_id') == $department->id ? 'selected' : '' }}>
@@ -64,7 +64,7 @@
                                     <label for="jeniskegiatan_id" class="col-sm-3 col-form-label">Jenis Kegiatan</label>
                                     <div class="col-sm-9">
                                         <select name="jeniskegiatan_id" class="form-control" required>
-                                            <option value="">Pilih Jenis...</option>
+                                            <option value="">Pilih Jenis Kegiatan...</option>
                                             @foreach ($jeniskegiatan as $jeniskegiatan)
                                                 <option value="{{ $jeniskegiatan->id }}"
                                                     {{ old('jeniskegiatan_id') == $jeniskegiatan->id ? 'selected' : '' }}>
@@ -84,7 +84,7 @@
                                     <label for="daftarkegiatans_id" class="col-sm-3 col-form-label">Daftar Kegiatan</label>
                                     <div class="col-sm-9">
                                         <select name="daftarkegiatans_id" class="form-control" required>
-                                            <option value="">Pilih Daftar Kegiatan...</option>
+                                            <option value="">Pilih Kegiatan...</option>
                                             @foreach ($daftarkegiatans as $daftarkegiatan)
                                                 <option value="{{ $daftarkegiatan->id }}"
                                                     {{ old('daftarkegiatans_id') == $daftarkegiatan->id ? 'selected' : '' }}>

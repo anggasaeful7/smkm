@@ -118,7 +118,7 @@
                     data: 'action',
                     name: 'action',
                     orderable: false,
-                    searcable: true,
+                    searchable: true,
                     width: '15%'
                 },
             ]

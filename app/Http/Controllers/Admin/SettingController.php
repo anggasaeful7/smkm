@@ -103,7 +103,7 @@ class SettingController extends Controller
         $item->save();
 
         return redirect()
-                ->route('user.index')
+                ->route('setting.index')
                 ->with('success', 'Sukses! Photo Pengguna telah diperbarui');
     }
 

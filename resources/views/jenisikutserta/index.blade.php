@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-Jenisikutserta
+Jenis Ikut Serta
 @endsection
 
 @section('container')
@@ -13,7 +13,7 @@ Jenisikutserta
                     <div class="col-auto mb-3">
                         <h1 class="page-header-title text-white">
                             <div class="page-header-icon text-white"><i class="fas fa-exclamation-circle"></i></div>
-                            Jenis Kegiatan
+                            Jenis Ikut Serta
                         </h1>
                     </div>
                 </div>
@@ -26,7 +26,7 @@ Jenisikutserta
             <div class="col-lg-12">
                 <div class="card card-header-actions mb-4">
                     <div class="card-header bg-green text-white">
-                        List Jenis Kegiatan
+                        Data Jenis Ikut Serta
                         @can('only admin')
                             
                         <a class="btn btn-sm btn-primary" href="{{ route('jenisikutserta.create') }}" data-bs-toggle="modal" data-bs-target="#createModal">
@@ -58,7 +58,7 @@ Jenisikutserta
                                 <thead>
                                     <tr>
                                         <th width="10">No.</th>
-                                        <th>Jenis Kegiatan</th>
+                                        <th>Jenis Ikut Serta</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -76,7 +76,7 @@ Jenisikutserta
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-success">
-                <h5 class="modal-title" id="createModal">Tambah Jenis Kegiatan</h5>
+                <h5 class="modal-title text-white" id="createModal">Tambah Jenis Ikut Serta</h5>
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('jenisikutserta.store') }}" method="post">
@@ -84,8 +84,8 @@ Jenisikutserta
                 <div class="modal-body">
                     <div class="mb-3">
                         <div class="col-md-12">
-                            <label for="post_id">Jenis Kegiatan</label>
-                            <input type="text" name="name" class="form-control" placeholder="Masukan Nama Departemen.." required>
+                            <label for="post_id">Jenis Ikut Serta</label>
+                            <input type="text" name="name" class="form-control" placeholder="Masukan Nama Jenis Ikut Serta.." required>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@ $name = $item->name;
                     <div class="mb-3">
                         <div class="col-md-12">
                             <label for="post_id">Jenis Kegiatan</label>
-                            <input type="text" name="name" value="{{ $name; }}" class="form-control" placeholder="Masukan Nama Departemen.." required>
+                            <input type="text" name="name" value="{{ $name; }}" class="form-control" placeholder="Masukan Nama Jenis Ikut Serta.." required>
                         </div>
                     </div>
                 </div>

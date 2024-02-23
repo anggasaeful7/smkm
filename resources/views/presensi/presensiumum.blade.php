@@ -46,14 +46,13 @@
                             <div class="card-header bg-green text-white">Form Kegiatan</div>
                             <div class="card-body">
                                 <div class="mb-3 row">
-                                    <label for="nama" class="col-sm-3 col-form-label">Nama Peserta</label>
-                                    <div class="col-sm-9">
+                                <div class="col-sm-9">
                                         <input type="hidden" name="user_id" value="{{ auth()->user()->id }}"> 
                                         <input type="hidden"
                                             class="form-control @error('daftarkegiatan_id') is-invalid @enderror"
                                             name="daftarkegiatan_id" value="{{ $id }}" required>
-                                        <input type="text" class="form-control @error('nama') is-invalid @enderror"
-                                            value="{{ old('nama') }}" name="nama" placeholder="Nama.." required>
+                                        <input type="hidden" class="form-control @error('nama') is-invalid @enderror"
+                                            value="{{auth()->user()->name}}" name="nama" placeholder="Nama.." required>
                                     </div>
                                     @error('nama')
                                         <div class="invalid-feedback">

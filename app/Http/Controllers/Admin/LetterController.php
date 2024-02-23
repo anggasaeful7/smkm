@@ -158,7 +158,8 @@ class LetterController extends Controller
     {
         $item = Letter::findOrFail($id);
 
-        return Storage::download($item->letter_file);
+        return Storage::disk('public')->download($item->letter_file);
+
     }
 
     public function update(Request $request, $id)

@@ -14,7 +14,7 @@
                             <h1 class="page-header-title text-white">
                                 <div class="page-header-icon text-white"><i class="fas fa-book"></i><i
                                         data-feather="arrow-right"></i></div>
-                                Data Surat Masuk
+                                Data Proposal Masuk
                             </h1>
                         </div>
                     </div>
@@ -27,13 +27,13 @@
                 <div class="col-lg-12">
                     <div class="card card-header-actions mb-4">
                         <div class="card-header text-white bg-green">
-                            Data :
+                            Data Pengajuan Proposal:
                             <div>
                                 @can('only admin')
                                     
                                 <a class="btn btn-sm btn-warning" href="{{ route('letter.create') }}">
                                     <i data-feather="plus-square"></i> &nbsp;
-                                    Tambah Surat
+                                    Tambah Data
                                 </a>
                                 @endcan
                                 <a class="btn btn-sm btn-white" href="{{ route('print-surat-masuk') }}" target="_blank">
@@ -68,12 +68,12 @@
                                     <thead>
                                         <tr>
                                             <th>No.</th>
-                                            <th>No. Surat</th>
+                                            <th>Nama Proposal</th>
                                             <th>Tanggal Masuk</th>
-                                            <th>No. Agenda</th>
-                                            <th>Perihal</th>
-                                            <th>Pengirim</th>
-                                            <th>Nominal</th>
+                                            <th>Pengajuan SKKM</th>
+                                            <th>Target Pendaftar</th>
+                                            <th>Penanggung Jawab</th>
+                                            <th>Nominal Pengajuan</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>

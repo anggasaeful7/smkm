@@ -19,7 +19,7 @@ Ubah Kegiatan
                     <div class="col-12 col-xl-auto mb-3">
                         <button class="btn btn-sm btn-light text-primary" onclick="javascript:window.history.back();">
                             <i class="me-1" data-feather="arrow-left"></i>
-                            Kembali Ke Semua Kegiatan
+                            Kembali
                         </button>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ Ubah Kegiatan
                                 @enderror
                             </div>
                             <div class="mb-3 row">
-                                <label for="department_id" class="col-sm-3 col-form-label">Organisasi Mahasiswa</label>
+                                <label for="department_id" class="col-sm-3 col-form-label">Nama Organisasi</label>
                                 <div class="col-sm-9">
                                     <select name="department_id" class="form-control selectx" required>
                                         <option value="">Pilih Organisasi Mahasiswa..</option>
@@ -114,16 +114,17 @@ Ubah Kegiatan
                                 @enderror
                             </div>
                             <div class="mb-3 row">
-                                <label for="deskripsi" class="col-sm-3 col-form-label">Deskripsi</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control @error('deskripsi') is-invalid @enderror" value="{{ $item->deskripsi }}" name="deskripsi" placeholder="Deskripsi Kegiatan.." required>
-                                </div>
-                                @error('deskripsi')
-                                <div class="invalid-feedback">
-                                    {{ $message; }}
-                                </div>
-                                @enderror
-                            </div>
+                                    <label for="deskripsi" class="col-sm-3 col-form-label">Deksripsi Kegiatan</label>
+                                    <div class="col-sm-9">
+                                        <textarea class="form-control @error('deskripsi') is-invalid @enderror"
+                                                name="deskripsi" placeholder="Masukan Deskripsi dan Informasi Penting (Termasuk SKKM).." required>{{ old('deskripsi') }}</textarea>
+                                    </div>
+                                    @error('deskripsi')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                  </div>
                             <div class="mb-3 row">
                                 <label for="ruangan" class="col-sm-3 col-form-label">Ruangan Kegiatan</label>
                                 <div class="col-sm-9">
@@ -139,7 +140,7 @@ Ubah Kegiatan
                                 <label for="letter_file" class="col-sm-3 col-form-label">File</label>
                                 <div class="col-sm-9">
                                     <input type="file" class="form-control @error('letter_file') is-invalid @enderror" value="{{ old('letter_file') }}" name="letter_file">
-                                    <div id="letter_file" class="form-text">Ekstensi .pdf | Kosongkan file jika tidak diisi</div>
+                                    <div id="letter_file" class="form-text">Ekstensi .JPG,PNG,JPEG | Size 1080x1080px (Kosongkan Jika Tidak Ada Perubahan)</div>
                                 </div>
                                 @error('letter_file')
                                 <div class="invalid-feedback">

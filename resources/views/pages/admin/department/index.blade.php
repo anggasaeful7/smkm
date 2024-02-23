@@ -26,7 +26,7 @@ Departemen
             <div class="col-lg-12">
                 <div class="card card-header-actions mb-4">
                     <div class="card-header bg-green text-white ">
-                        List Organisasi
+                        Data Organisasi
                         @can('only admin')
                             
                         <a class="btn btn-sm btn-primary" href="{{ route('department.create') }}" data-bs-toggle="modal" data-bs-target="#createModal">
@@ -75,8 +75,8 @@ Departemen
 <div class="modal fade" id="createModal" role="dialog" aria-labelledby="createModal" aria-hidden="true" style="overflow:hidden;">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-success">
-                <h5 class="modal-title" id="createModal">Tambah Data Organisasi</h5>
+            <div class="modal-header bg-success ">
+                <h5 class="modal-title text-white" id="createModal">Tambah Data Organisasi</h5>
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('department.store') }}" method="post">

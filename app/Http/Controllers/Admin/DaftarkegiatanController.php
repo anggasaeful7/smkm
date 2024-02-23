@@ -180,7 +180,7 @@ class DaftarkegiatanController extends Controller
     {
         $item = Daftarkegiatan::findOrFail($id);
 
-        return Storage::download($item->letter_file);
+        return Storage::disk('public')->download($item->letter_file);
     }
 
     public function update(Request $request, $id)

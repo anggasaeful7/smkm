@@ -44,13 +44,13 @@
                 <div class="row gx-4">
                     <div class="col-lg-9">
                         <div class="card mb-4">
-                            <div class="card-header bg-green text-white">Form Disposisi <span style="color: red;"> * Harus
+                            <div class="card-header bg-green text-white">Form Data Persetujuan <span style="color: red;"> * Harus
                                     diisi</span></div>
                             <div class="card-body">
                                 <div class="mb-3 row">
-                                    <label for="letter_id" class="col-sm-3 col-form-label">No. Surat Disposisi</label>
+                                    <label for="letter_id" class="col-sm-3 col-form-label"></label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control @error('letter_id') is-invalid @enderror"
+                                        <input type="hidden" class="form-control @error('letter_id') is-invalid @enderror"
                                             name="letter_id" value="{{ old('letter_id', $letter->id) }}">
 
                                     </div>
@@ -75,7 +75,7 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="status" class="col-sm-3 col-form-label">Status</label>
+                                    <label for="status" class="col-sm-3 col-form-label">Status Pengajuan</label>
                                     <div class="col-sm-9 row" style="float: right;">
                                         <div class="col-sm-4">
                                             <input type="checkbox" value="Setuju" name="status[]"
@@ -94,10 +94,10 @@
                                 </div>
 
                                 <div class="mb-3 row">
-                                    <label for="catatan_rektors" class="col-sm-3 col-form-label">Catatan Rektor</label>
+                                    <label for="catatan_rektors" class="col-sm-3 col-form-label">Catatan Kemahasiswaan</label>
                                     <div class="col-sm-9">
                                         <textarea id="catatan_rektors" class="form-control @error('catatan_rektor') is-invalid @enderror" name="catatan_rektor"
-                                            placeholder="Catatan Rektor.." required>{{ $item->catatan_rektor }}</textarea>
+                                            placeholder="Catatan Kemahasiswaan.." required>{{ $item->catatan_rektor }}</textarea>
                                     </div>
                                     @error('catatan_rektor')
                                         <div class="invalid-feedback">
@@ -112,7 +112,7 @@
                 <div class="row gx-4">
                     <div class="col-lg-9">
                         <div class="card mb-4">
-                            <div class="card-header text-white bg-green">Form Disposisi Lanjutan <span style="color: red;">
+                            <div class="card-header text-white bg-green">Form Persetujuan Pendanaan <span style="color: red;">
                                     * Harus diisi</span></div>
                             <div class="card-body">
                                 <div class="mb-3 row">

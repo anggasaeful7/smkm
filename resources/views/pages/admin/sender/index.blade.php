@@ -13,7 +13,7 @@ Pengirim Surat
                     <div class="col-auto mb-3">
                         <h1 class="page-header-title text-white">
                             <div class="page-header-icon text-white"><i class="fas fa-address-card"></i></div>
-                            Pengaju Proposal
+                            Penanggung Jawab Proposal
                         </h1>
                     </div>
                 </div>
@@ -26,7 +26,7 @@ Pengirim Surat
             <div class="col-lg-12">
                 <div class="card card-header-actions mb-4">
                     <div class="card-header bg-green text-white">
-                        List Pengaju Proposal
+                        List Penanggung Jawab Proposal
                         @can('only admin')
                             
                         <a class="btn btn-sm btn-primary" href="{{ route('sender.create') }}" data-bs-toggle="modal" data-bs-target="#createModal">
@@ -79,7 +79,7 @@ Pengirim Surat
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-green">
-                <h5 class="modal-title text-white" id="createModal">Tambah Data Pengirim Surat</h5>
+                <h5 class="modal-title text-white" id="createModal">Tambah Data Penanggung Jawab Proposal</h5>
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('sender.store') }}" method="post">
@@ -88,13 +88,13 @@ Pengirim Surat
                     <div class="mb-3">
                         <div class="col-md-12">
                             <label for="name">Nama Pengirim</label>
-                            <input type="text" name="name" class="form-control" placeholder="Masukan Nama Pengirim.." required>
+                            <input type="text" name="name" class="form-control" placeholder="Masukan Nama Penanggung Jawab.." required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="col-md-12">
                             <label for="address">Alamat</label>
-                            <textarea name="address" class="form-control" required></textarea>
+                            <textarea name="address" class="form-control" placeholder="Masukan Alamat Penanggung Jawab.." required></textarea>
                         </div>
                     </div>
                     <div class="mb-3">

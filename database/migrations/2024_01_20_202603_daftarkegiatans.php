@@ -24,7 +24,7 @@ class Daftarkegiatans extends Migration
             $table->string('letter_file');
             $table->string('letter_type');
             $table->string('batas');
-            $table->string('skripsi')->nullable();
+            $table->string('sertifikat')->nullable();
             $table->timestamps();
         });
     }

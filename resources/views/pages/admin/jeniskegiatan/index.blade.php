@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-Departemen
+Jenis Kegiatan
 @endsection
 
 @section('container')
@@ -26,7 +26,7 @@ Departemen
             <div class="col-lg-12">
                 <div class="card card-header-actions mb-4">
                     <div class="card-header bg-green text-white">
-                        List Jenis Kegiatan
+                        Data Jenis Kegiatan
                         @can('only admin')
                             
                         <a class="btn btn-sm btn-primary" href="{{ route('jeniskegiatan.create') }}" data-bs-toggle="modal" data-bs-target="#createModal">
@@ -76,7 +76,7 @@ Departemen
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-success">
-                <h5 class="modal-title" id="createModal">Tambah Jenis Kegiatan</h5>
+                <h5 class="modal-title text-white" id="createModal">Tambah Jenis Kegiatan</h5>
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('jeniskegiatan.store') }}" method="post">
@@ -85,7 +85,7 @@ Departemen
                     <div class="mb-3">
                         <div class="col-md-12">
                             <label for="post_id">Jenis Kegiatan</label>
-                            <input type="text" name="name" class="form-control" placeholder="Masukan Nama Departemen.." required>
+                            <input type="text" name="name" class="form-control" placeholder="Masukan Nama Jenis Kegiatan.." required>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@ $name = $item->name;
                     <div class="mb-3">
                         <div class="col-md-12">
                             <label for="post_id">Jenis Kegiatan</label>
-                            <input type="text" name="name" value="{{ $name; }}" class="form-control" placeholder="Masukan Nama Departemen.." required>
+                            <input type="text" name="name" value="{{ $name; }}" class="form-control" placeholder="Masukan Nama Jenis Kegiatan.." required>
                         </div>
                     </div>
                 </div>

@@ -26,11 +26,11 @@ Prodi
             <div class="col-lg-12">
                 <div class="card card-header-actions mb-4">
                     <div class="card-header bg-green text-white">
-                        List Program Studi
+                        Data Program Studi
                         @can('only admin')
                             
                         <a class="btn btn-sm btn-primary" href="{{ route('prodi.create') }}" data-bs-toggle="modal" data-bs-target="#createModal">
-                            Tambah Program Studi
+                            Tambah Data
                         </a>
                         @endcan
                     </div>
