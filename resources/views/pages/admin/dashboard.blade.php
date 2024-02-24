@@ -64,7 +64,7 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="me-3">
-                                    <div class="text-white-75 small">Proposal Masuk</div>
+                                    <div class="text-white-75 small">Form Pengajuan Sertifikat</div>
                                     <div class="text-lg fw-bold"></div>
                                 </div>
                                 <i class="feather-xl text-white-50" data-feather="mail"></i>
@@ -81,7 +81,7 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="me-3">
-                                    <div class="text-white-75 small">Proposal Keluar</div>
+                                    <div class="text-white-75 small">Data Pengajuan Proposal</div>
                                     <div class="text-lg fw-bold"></div>
                                 </div>
                                 <i class="feather-xl text-white-50" data-feather="mail"></i>
@@ -98,7 +98,7 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="me-3">
-                                    <div class="text-white-75 small">Proses Proposal</div>
+                                    <div class="text-white-75 small">Status Proposal</div>
                                     <div class="text-lg fw-bold"></div>
                                 </div>
                                 <i class="feather-xl text-white-50" data-feather="mail"></i>

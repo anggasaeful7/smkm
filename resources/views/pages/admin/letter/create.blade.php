@@ -44,7 +44,7 @@
                                     <div class="col-sm-9">
                                         <select name="letter_type" class="form-control" required>
                                             <option value="Surat Masuk"
-                                                {{ old('letter_type') == 'Surat Masuk' ? 'selected' : '' }}>Proosal Masuk
+                                                {{ old('letter_type') == 'Surat Masuk' ? 'selected' : '' }}>Proposal Masuk
                                             </option>
                                         </select>
                                     </div>
@@ -144,17 +144,24 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="nominal" class="col-sm-3 col-form-label">Nominal Pengajuan</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control @error('nominal') is-invalid @enderror"
-                                            value="{{ old('nominal') }}" name="nominal" placeholder="Masukan Nominal Pengajuan (Contoh:1.000.00)" required>
-                                    </div>
-                                    @error('nominal')
-                                        <div class="invalid-feedback">
-                                            {{ $message }}
-                                        </div>
-                                    @enderror
-                                </div>
+    <label for="nominal" class="col-sm-3 col-form-label">Nominal Pengajuan</label>
+    <div class="col-sm-9">
+        <input type="number" 
+               class="form-control @error('nominal') is-invalid @enderror" 
+               value="{{ old('nominal') }}" 
+               name="nominal" 
+               placeholder="Masukkan Nominal Pengajuan (Contoh: 1000000)" 
+               title="Masukkan angka bulat sebagai Nominal Pengajuan" 
+               step="1" 
+               required>
+    </div>
+    @error('nominal')
+        <div class="invalid-feedback">
+            {{ $message }}
+        </div>
+    @enderror
+</div>
+
                                 <div class="mb-3 row">
                                     <label for="letter_file" class="col-sm-3 col-form-label">Lampirkan Proposal</label>
                                     <div class="col-sm-9">
