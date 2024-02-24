@@ -52,11 +52,18 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('admin/dashboard');
+
+            // Check for roles using a suitable package (e.g., spatie/laravel-permission)
+            if ($request->user()->hasRole('umum') || $request->user()->hasRole('ormawa')) {
+                return redirect()->intended('admin/kegiatan/daftar-kegiatan-umum');
+            } else {
+                return redirect()->intended('admin/dashboard');
+            }
         }
 
         return back()->with('loginError', 'Login Failed!');
     }
+
 
     public function logout(Request $request)
     {

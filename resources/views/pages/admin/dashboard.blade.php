@@ -5,6 +5,13 @@
 @endsection
 
 @section('container')
+    {{-- Cwk eole jika umum di direct ke daftar-kegiatan-umum --}}
+    @if (Auth::user()->role == 'umum' || Auth::user()->role == 'ormawa')
+        @php
+            header('Location: /kegiatan/daftar-kegiatan-umum');
+            exit();
+        @endphp
+    @endif
     <main>
         <header class="page-header page-header-dark pb-10" style="background-color: green;">
             <div class="container-xl px-4">
