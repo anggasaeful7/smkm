@@ -223,11 +223,6 @@
             @can('nav ormawa')
                 <div class="nav accordion" id="accordionSidenav">
                     <div class="sidenav-menu-heading">Menu</div>
-                    <a class="nav-link {{ request()->is('admin/dashboard') ? 'active' : '' }}"
-                        href="{{ route('admin-dashboard') }}">
-                        <div class="nav-link-icon"><i class="fas fa-home"></i></div>
-                        Beranda
-                    </a>
                     <div class="dropdown">
                         <a class="nav-link dropdown-toggle">
                             <div class="nav-link-icon"><i Class="fa fa-th-large"></i></div>
@@ -288,11 +283,6 @@
             @can('nav umum')
                 <div class="nav accordion" id="accordionSidenav">
                     <div class="sidenav-menu-heading">Menu</div>
-                    <a class="nav-link {{ request()->is('admin/dashboard') ? 'active' : '' }}"
-                        href="{{ route('daftar-kegiatan-umum') }}">
-                        <div class="nav-link-icon"><i class="fas fa-home"></i></div>
-                        Beranda
-                    </a>
                     <div class="dropdown">
                         <a class="nav-link dropdown-toggle">
                             <div class="nav-link-icon"><i Class="fa fa-th-large"></i></div>
