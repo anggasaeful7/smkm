@@ -116,17 +116,23 @@
                                     * Harus diisi</span></div>
                             <div class="card-body">
                                 <div class="mb-3 row">
-                                    <label for="nominal" class="col-sm-3 col-form-label">Nominal</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control @error('nominal') is-invalid @enderror"
-                                            value="{{ $item->nominal }}" name="nominal" placeholder="nominal..">
-                                    </div>
-                                    @error('nominal')
-                                        <div class="invalid-feedback">
-                                            {{ $message }}
+                                <label for="nominal" class="col-sm-3 col-form-label">Nominal yang Disetujui</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" 
+                                                class="form-control @error('nominal') is-invalid @enderror" 
+                                                value="{{ old('nominal') }}" 
+                                                name="nominal" 
+                                                placeholder="Masukkan Nominal Pengajuan (Contoh: 1000000)" 
+                                                title="Masukkan angka bulat sebagai Nominal Pengajuan" 
+                                                step="1" 
+                                                required>
                                         </div>
-                                    @enderror
-                                </div>
+                                        @error('nominal')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
                                 <div class="mb-3 row">
                                     <label for="tertulis" class="col-sm-3 col-form-label">Tertulis</label>
                                     <div class="col-sm-9">

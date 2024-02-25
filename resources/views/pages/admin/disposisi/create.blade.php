@@ -113,8 +113,8 @@
                                 <div class="mb-3 row">
                                     <label for="nominal" class="col-sm-3 col-form-label">Nominal</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control @error('nominal') is-invalid @enderror"
-                                            value="{{ old('nominal') }}" name="nominal" placeholder="Nominal Angka (Contoh: 1.000.00)">
+                                        <input type="number" class="form-control @error('nominal') is-invalid @enderror"
+                                            value="{{ old('nominal') }}" name="nominal" placeholder="Nominal Angka (Contoh: 100000)">
                                     </div>
                                     @error('nominal')
                                         <div class="invalid-feedback">
