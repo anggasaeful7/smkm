@@ -89,6 +89,30 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 row">
+                                    <label for="catatan_rektors" class="col-sm-3 col-form-label">Nama Proposal</label>
+                                    <div class="col-sm-9">
+                                        <input id="catatan_rektors" class="form-control @error('catatan_rektor') is-invalid @enderror" name="catatan_rektor"
+                                            placeholder="Catatan Kemahasiswaan.." value="{{$letter->letter_no}}" required disabled />
+                                    </div>
+                                    @error('catatan_rektor')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="catatan_rektors" class="col-sm-3 col-form-label">Nominal Pengajuan</label>
+                                    <div class="col-sm-9">
+                                    <input id="catatan_rektors" class="form-control @error('catatan_rektor') is-invalid @enderror" name="catatan_rektor"
+                                            placeholder="Catatan Kemahasiswaan.." value="{{$letter->nominal}}" required disabled />
+                                    </div>
+                                    @error('catatan_rektor')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+                                <div class="mb-3 row">
                                     <label for="catatan_rektors" class="col-sm-3 col-form-label">Catatan Kemahasiswaan</label>
                                     <div class="col-sm-9">
                                         <textarea id="catatan_rektors" class="form-control @error('catatan_rektor') is-invalid @enderror" name="catatan_rektor"

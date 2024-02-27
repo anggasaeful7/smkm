@@ -111,6 +111,7 @@ Route::prefix('admin')
         //Filter
         Route::get('/filter-kegiatan', [FilterController::class, 'showFilterForm'])->name('filter.form');
         Route::post('/filter-kegiatan', [FilterController::class, 'filter'])->name('filter.kegiatan');
+        
         //datapendaftar / listpendaftar
         // Route::resource('/datapendaftar', PendaftarController::class, ['except' => ['show']]);
         // Route::get('datapendaftar/data-pendaftar', [PendaftarController::class, 'data_pendaftar'])->name('data-pendaftar');

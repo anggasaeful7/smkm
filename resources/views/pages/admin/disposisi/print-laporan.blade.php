@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Surat Disposisi</title>
+    <title>Status Pengajuan Proposal</title>
 </head>
 
 <body>
@@ -51,21 +51,15 @@
                     </table>
                     <br>
                     <div>
-                        <h6>Laporan Surat Disposisi</h6>
+                        <h6>Laporan Status Pengajuan Proposal</h6>
                     </div>
                     <table class="table table-striped table-bordered table-sm" width="100%">
                         <thead>
                             <th style="text-align: center;font-size: small;">No.</th>
-                            <th style="text-align: center;font-size: small;">No. Surat</th>
-                            <th style="text-align: center;font-size: small;" width="20">Lampiran</th>
+                            <th style="text-align: center;font-size: small;">Nama Proposal</th>
                             <th style="text-align: center;font-size: small;" width="20">Status</th>
-                            <th style="text-align: center;font-size: small;" width="20">Sifat</th>
-                            <th style="text-align: center;font-size: small;">Penerima Disposisi</th>
-                            <th style="text-align: center;font-size: small;">Kepada</th>
-                            <th style="text-align: center;font-size: small;">Tanggal Surat</th>
-                            <th style="text-align: center;font-size: small;">Diterima</th>
                             <th style="text-align: center;font-size: small;">Tanggal Penyelesaian</th>
-                            <th style="text-align: center;font-size: small;">Diajukan Kembali</th>
+                            <th style="text-align: center;font-size: small;">Nominal Disetujui</th>
                         </thead>
                         <tbody>
                             @php
@@ -75,15 +69,9 @@
                             <tr>
                                 <td style="text-align: center;font-size: small;">{{ $no++; }}</td>
                                 <td style="text-align: center;font-size: small;">{{ $letter->letter->letter_no }}</td>
-                                <td style="text-align: center;font-size: small;" width="20">{{ $letter->lampiran }}</td>
                                 <td style="text-align: center;font-size: small;" width="20">{{ $letter->status }}</td>
-                                <td style="text-align: center;font-size: small;" width="20">{{ $letter->sifat }}</td>
-                                <td style="text-align: center;font-size: small;">{{ $letter->letter->disposisi }}</td>
-                                <td style="text-align: center;font-size: small;">{{ $letter->kepada }}</td>
-                                <td style="text-align: center;font-size: small;">{{ Carbon\Carbon::parse($letter->letter->letter_date)->translatedFormat('l, d F Y') }}</td>
-                                <td style="text-align: center;font-size: small;">{{ Carbon\Carbon::parse($letter->letter->date_received)->translatedFormat('l, d F Y') }}</td>
-                                <td style="text-align: center;font-size: small;">{{ Carbon\Carbon::parse($letter->letter->tgl_selesai)->translatedFormat('l, d F Y') }}</td>
-                                <td style="text-align: center;font-size: small;">{{ Carbon\Carbon::parse($letter->letter->tgl_aju_kembali)->translatedFormat('l, d F Y') }}</td>
+                                <td style="text-align: center;font-size: small;">{{ Carbon\Carbon::parse($letter->letter->created_at)->translatedFormat('l, d F Y') }}</td>
+                                <td style="text-align: center;font-size: small;">{{ $letter->letter->nominal }}</td>
                             </tr>
                             @endforeach
                         </tbody>
