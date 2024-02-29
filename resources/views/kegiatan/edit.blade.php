@@ -73,10 +73,10 @@ Ubah Kegiatan
                             <div class="mb-3 row">
                                 <label for="department_id" class="col-sm-3 col-form-label">Nama Organisasi</label>
                                 <div class="col-sm-9">
-                                    <select name="department_id" class="form-control selectx" required>
+                                    <select name="department_id" class="form-control selectx" required disabled>
                                         <option value="">Pilih Organisasi Mahasiswa..</option>
                                         @foreach ($departments as $department)
-                                        <option value="{{ $department->id }}" {{ ($item->department_id == $department->id)? 'selected':''; }}>{{ $department->name }}</option>
+                                            <option value="{{ $department->id }}" {{ ($item->department_id == $department->id)? 'selected':''; }}>{{ $department->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>

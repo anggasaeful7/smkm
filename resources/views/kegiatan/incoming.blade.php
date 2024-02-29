@@ -28,8 +28,7 @@ Daftar Kegiatan
                     <div class="card-header bg-green text-white">
                         Data Kegiatan:
                         <div>
-                            @can('only admin')
-                                
+                            @can('only admin') 
                             <a class="btn btn-sm btn-warning" href="{{ route('kegiatan.create') }}">
                                 <i data-feather="plus-square"></i> &nbsp;
                                 Tambah Kegiatan
