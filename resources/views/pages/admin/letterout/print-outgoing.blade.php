@@ -58,10 +58,10 @@
                     <table class="table table-sm table-striped table-bordered" width="100%">
                         <thead>
                             <th style="text-align: center;font-size: small;">No.</th>
-                            <th style="text-align: center;font-size: small;">No. Surat</th>
-                            <th style="text-align: center;font-size: small;">Perihal</th>
-                            <th style="text-align: center;font-size: small;">Tujuan</th>
-                            <th style="text-align: center;font-size: small;">Tanggal</th>
+                            <th style="text-align: center;font-size: small;">Nama Proposal</th>
+                            <th style="text-align: center;font-size: small;">Tanggal Masuk</th>
+                            <th style="text-align: center;font-size: small;">Pengajuan SKKM</th>
+                            <th style="text-align: center;font-size: small;">Penanggung Jawab</th>
                         </thead>
                         <tbody>
                             @php
@@ -73,8 +73,7 @@
                                     <td style="text-align: center;font-size: small;">{{ $letterout->letter_no }}</td>
                                     <td style="text-align: center;font-size: small;">{{ $letterout->regarding }}</td>
                                     <td style="text-align: center;font-size: small;">{{ $letterout->purpose }}</td>
-                                    <td style="text-align: center;font-size: small;">
-                                        {{ Carbon\Carbon::parse($letterout->letter_date)->translatedFormat('l, d F Y') }}
+                                    <td style="text-align: center;font-size: small;">{{ Carbon\Carbon::parse($letterout->letter_date)->translatedFormat('l, d F Y') }}
                                     </td>
                                 </tr>
                             @endforeach

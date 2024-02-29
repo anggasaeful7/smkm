@@ -54,13 +54,12 @@
                     <table class="table table-striped table-bordered table-sm">
                         <thead>
                             <th style="text-align: center;font-size: small;">No.</th>
-                            <th style="text-align: center;font-size: small;">No.Surat</th>
-                            <th style="text-align: center;font-size: small;">No.Agenda</th>
-                            <th style="text-align: center;font-size: small;">Pengirim</th>
-                            <th style="text-align: center;font-size: small;">Perihal</th>
-                            <th style="text-align: center;font-size: small;">Tanggal Surat</th>
-                            <th style="text-align: center;font-size: small;">Diterima</th>
-                            <th style="text-align: center;font-size: small;">Disposisi</th>
+                            <th style="text-align: center;font-size: small;">Nama Proposal</th>
+                            <th style="text-align: center;font-size: small;">Tanggal Masuk</th>
+                            <th style="text-align: center;font-size: small;">Pengajuan SKKM</th>
+                            <th style="text-align: center;font-size: small;">Target Pendaftar</th>
+                            <th style="text-align: center;font-size: small;">Penanggung Jawab</th>
+                            <th style="text-align: center;font-size: small;">Nominal Pengajuan</th>
                         </thead>
                         <tbody>
                             @php
@@ -70,12 +69,11 @@
                             <tr>
                                 <td style="text-align: center;font-size: small;">{{ $no++; }}</td>
                                 <td style="text-align: center;font-size: small;">{{ $letter->letter_no }}</td>
-                                <td style="text-align: center;font-size: small;">{{ $letter->agenda_no }}</td>
-                                <td style="text-align: center;font-size: small;">{{ $letter->sender->name }}</td>
-                                <td style="text-align: center;font-size: small;">{{ $letter->regarding }}</td>
                                 <td style="text-align: center;font-size: small;">{{ Carbon\Carbon::parse($letter->letter_date)->translatedFormat('l, d F Y') }}</td>
-                                <td style="text-align: center;font-size: small;">{{ Carbon\Carbon::parse($letter->date_received)->translatedFormat('l, d F Y') }}</td>
-                                <td style="text-align: center;font-size: small;">{{ $letter->disposisi }}</td>
+                                <td style="text-align: center;font-size: small;">{{ $letter->agenda_no }}</td>
+                                <td style="text-align: center;font-size: small;">{{ $letter->regarding }}</td>
+                                <td style="text-align: center;font-size: small;">{{ $letter->sender->name }}</td>
+                                <td style="text-align: center;font-size: small;">{{ $letter->nominal }}</td>
                             </tr>
                             @endforeach
                         </tbody>
