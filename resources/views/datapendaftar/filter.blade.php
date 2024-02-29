@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    Filter Kegiatan
+    Filter Pendaftar
 @endsection
 
 @section('container')

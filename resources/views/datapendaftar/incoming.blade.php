@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    Data Pendaftarans
+    Data Pendaftar
 @endsection
 
 @section('container')

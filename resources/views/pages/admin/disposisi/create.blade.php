@@ -58,7 +58,18 @@
                                             {{ $message }}
                                         </div>
                                     @enderror
-
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="catatan_rektors" class="col-sm-3 col-form-label">Nama Proposal</label>
+                                    <div class="col-sm-9">
+                                        <input id="catatan_rektors" class="form-control @error('catatan_rektor') is-invalid @enderror" name="catatan_rektor"
+                                            placeholder="Catatan Kemahasiswaan.." value="{{$letter->letter_no}}" required disabled />
+                                    </div>
+                                    @error('catatan_rektor')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="lampiran" class="col-sm-3 col-form-label">File Proposal</label>
@@ -89,30 +100,6 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="catatan_rektors" class="col-sm-3 col-form-label">Nama Proposal</label>
-                                    <div class="col-sm-9">
-                                        <input id="catatan_rektors" class="form-control @error('catatan_rektor') is-invalid @enderror" name="catatan_rektor"
-                                            placeholder="Catatan Kemahasiswaan.." value="{{$letter->letter_no}}" required disabled />
-                                    </div>
-                                    @error('catatan_rektor')
-                                        <div class="invalid-feedback">
-                                            {{ $message }}
-                                        </div>
-                                    @enderror
-                                </div>
-                                <div class="mb-3 row">
-                                    <label for="catatan_rektors" class="col-sm-3 col-form-label">Nominal Pengajuan</label>
-                                    <div class="col-sm-9">
-                                    <input id="catatan_rektors" class="form-control @error('catatan_rektor') is-invalid @enderror" name="catatan_rektor"
-                                            placeholder="Catatan Kemahasiswaan.." value="{{$letter->nominal}}" required disabled />
-                                    </div>
-                                    @error('catatan_rektor')
-                                        <div class="invalid-feedback">
-                                            {{ $message }}
-                                        </div>
-                                    @enderror
-                                </div>
-                                <div class="mb-3 row">
                                     <label for="catatan_rektors" class="col-sm-3 col-form-label">Catatan Kemahasiswaan</label>
                                     <div class="col-sm-9">
                                         <textarea id="catatan_rektors" class="form-control @error('catatan_rektor') is-invalid @enderror" name="catatan_rektor"
@@ -134,6 +121,18 @@
                             <div class="card-header text-white bg-green">Form Persetujuan Pendanaan <span style="color: red;">
                                     * Harus diisi</span></div>
                             <div class="card-body">
+                            <div class="mb-3 row">
+                                    <label for="catatan_rektors" class="col-sm-3 col-form-label">Nominal Pengajuan</label>
+                                    <div class="col-sm-9">
+                                    <input id="catatan_rektors" class="form-control @error('catatan_rektor') is-invalid @enderror" name="catatan_rektor"
+                                            placeholder="Catatan Kemahasiswaan.." value="{{$letter->nominal}}" required disabled />
+                                    </div>
+                                    @error('catatan_rektor')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
                                 <div class="mb-3 row">
                                     <label for="nominal" class="col-sm-3 col-form-label">Nominal</label>
                                     <div class="col-sm-9">
